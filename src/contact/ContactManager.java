@@ -1,3 +1,5 @@
+package contact;
+
 import java.util.Scanner;
 
 public class ContactManager {
@@ -73,11 +75,11 @@ public class ContactManager {
 
     public boolean isValidContact(Contact contact) {
         if (contact.name == null || contact.name.trim().length() < 3) {
-            System.out.println("Contact name is wrong");
+            System.out.println("contact.Contact name is wrong");
             return false;
         }
         if (contact.surname == null || contact.surname.trim().length() < 3) {
-            System.out.println("Contact surname is wrong ");
+            System.out.println("contact.Contact surname is wrong ");
             return false;
         }
         if (contact.phone == null || contact.phone.trim().length() != 12 || !contact.phone.startsWith("998")) {
@@ -87,7 +89,7 @@ public class ContactManager {
         char[] phoneArr = contact.phone.toCharArray();
         for (char c : phoneArr) {
             if (!Character.isDigit(c)) {
-                System.out.println("Contact phone is wrong");
+                System.out.println("contact.Contact phone is wrong");
                 return false;
             }
         }
@@ -113,7 +115,7 @@ public class ContactManager {
         }
         contactArray[index] = contact;
         index++;
-        System.out.println("Contact added.");
+        System.out.println("contact.Contact added.");
     }
 
     public void printContactList() {
@@ -162,7 +164,7 @@ public class ContactManager {
             Contact contact = contactArray[i];
             if (contact != null && contact.phone.equals(phone)) {
                 contactArray[i] = null;
-                System.out.println("Contact deleted");
+                System.out.println("contact.Contact deleted");
                 break;
             }
         }

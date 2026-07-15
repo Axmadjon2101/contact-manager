@@ -1,3 +1,3 @@
-# Contact Manager
+# contact.Contact Manager
 
-A simple Contact Manager project written in Java.
+A simple contact.Contact Manager project written in Java.
